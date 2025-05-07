@@ -31,6 +31,7 @@ router.get('/', (req, res) => {
     { id: 24, nome: 'Item Ômega', descricao: 'Última letra do alfabeto grego.' }
   ];
 
+  // Renderiza o template 'lista' com os dados
   res.render('lista', {
     titulo: 'Alfabeto Grego',
     itensParaView: meusItens

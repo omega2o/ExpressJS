@@ -1,12 +1,12 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
+/* Rota principal para usuários. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.send('Respondendo com um recurso.');
 });
 
-/* GET users listing. */
+/* Rota personalizada para Joédio. */
 router.get('/joedio', function(req, res, next) {
   res.send('Olá, Joédio!');
 });

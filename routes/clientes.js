@@ -1,15 +1,14 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
+// Rota para a página inicial
+router.get('/', (req, res) => {
   res.render('index', { title: 'Clientes' });
 });
 
-/* GET home page. */
-router.get('/vip', function(req, res, next) {
+// Rota para a página de clientes VIP
+router.get('/vip', (req, res) => {
   res.render('index', { title: 'Clientes VIP' });
 });
-
 
 module.exports = router;
