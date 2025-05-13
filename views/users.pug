@@ -20,32 +20,28 @@ html(lang="pt-br")
       .card-title strong {
         color: #0d6efd;
       }
-      .card-img-top {
-        object-fit: cover;
-        height: 200px;
-      }
 
   body
     .container.mt-4
       h1.display-5.mb-4= titulo
 
-      if itensParaView && itensParaView.length > 0
+      if usuariosParaView && usuariosParaView.length > 0
         .row
-          each peixe in itensParaView
+          each usuario in usuariosParaView
             .col-md-6.col-lg-4.mb-3
               .card.h-100
-                if peixe.imagem
-                  img.card-img-top(src=peixe.imagem, alt=`Imagem de ${peixe.nome}`)
                 .card-body.d-flex.flex-column
                   h5.card-title
-                    strong= peixe.nome
+                    strong= usuario.nome
                     small.text-muted.fw-normal
-                      |  (ID: #{peixe.id})
-                  p.card-text.flex-grow-1= peixe.descricao
-                  a.btn.btn-sm.btn-outline-primary.mt-auto(href="#") Ver Detalhes
+                      |  (ID: #{usuario.id})
+                  p.card-text.mb-1
+                    | Email: #{usuario.email}
+                  p.card-text.flex-grow-1= usuario.descricao
+                  a.btn.btn-sm.btn-outline-primary.mt-auto(href="#") Ver Perfil
       else
         .alert.alert-warning(role="alert")
-          | Nenhum peixe para exibir no momento.
+          | Nenhum usuário para exibir no momento.
 
       hr.my-4
 
